@@ -91,3 +91,6 @@ function chunk2(array, size) {
 }
 
 module.exports = chunk2;
+
+
+// some comment for testing
