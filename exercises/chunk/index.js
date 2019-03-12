@@ -62,8 +62,6 @@ function chunk(array, size) {
   return chunked;
 }
 
-module.exports = chunk;
-
 // i=0, j=i+length
 
 // first_element = arr.slice(i,j)
@@ -82,3 +80,14 @@ module.exports = chunk;
 //     j = i+length;
 //     result.push(arr.slice(i,j));
 //     i = j;
+
+function chunk2(array, size) {
+  var chunkArray = [],
+    i;
+  for (var i = 0; i < array.length; i = i + size) {
+    chunkArray.push(array.slice(i, i + size));
+  }
+  return chunkArray;
+}
+
+module.exports = chunk2;
